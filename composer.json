@@ -13,8 +13,9 @@
         "role" : "Developer"
     },
     "require"    : {
-        "bower-asset/intl-tel-input"  : "*",
-        "bower-asset/jquery.inputmask": "*"
+        "bower-asset/intl-tel-input"    : "*",
+        "bower-asset/jquery.inputmask"  : "*",
+        "giggsey/libphonenumber-for-php": "~8.0.0"
     },
     "autoload"   : {
         "psr-4": {
