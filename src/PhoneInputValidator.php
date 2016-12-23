@@ -1,5 +1,6 @@
 <?php
-namespace borales\extensions\phoneInput;
+
+namespace Tapakan\PhoneInput;
 
 use libphonenumber\NumberParseException;
 use libphonenumber\PhoneNumberUtil;
