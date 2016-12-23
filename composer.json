@@ -13,7 +13,8 @@
         "role" : "Developer"
     },
     "require"    : {
-        "bower-asset/intl-tel-input": "*"
+        "bower-asset/intl-tel-input"  : "*",
+        "bower-asset/jquery.inputmask": "*"
     },
     "autoload"   : {
         "psr-4": {
