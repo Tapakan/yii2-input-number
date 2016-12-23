@@ -12,19 +12,21 @@ class PhoneInputAsset extends AssetBundle
     /**
      * @var string
      */
-    public $sourcePath = '@bower/intl-tel-input';
+    public $sourcePath = '@bower/';
 
     /**
      * @var array
      */
-    public $css = ['build/css/intlTelInput.css'];
+    public $css = ['intl-tel-input/build/css/intlTelInput.css'];
 
     /**
      * @var array
      */
     public $js = [
-        'build/js/utils.js',
-        'build/js/intlTelInput.min.js',
+        'intl-tel-input/build/js/utils.js',
+        'intl-tel-input/build/js/intlTelInput.min.js',
+        'jquery.inputmask/dist/inputmask/jquery.inputmask.js',
+        'jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js',
     ];
 
     /** @var array */
