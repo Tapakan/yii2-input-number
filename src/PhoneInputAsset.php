@@ -25,8 +25,7 @@ class PhoneInputAsset extends AssetBundle
     public $js = [
         'intl-tel-input/build/js/utils.js',
         'intl-tel-input/build/js/intlTelInput.min.js',
-        'jquery.inputmask/dist/inputmask/jquery.inputmask.js',
-        'jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js',
+        'jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js'
     ];
 
     /** @var array */
