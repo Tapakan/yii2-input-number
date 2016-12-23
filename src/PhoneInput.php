@@ -77,7 +77,8 @@ class PhoneInput extends InputWidget
 
         $this->view->registerJs(
             "var input = $('#{$id}');" .
-            "input.intlTelInput($jsOptions);"
+            "input.intlTelInput($jsOptions);" .
+            "input.inputmask('+9{1,5}9{5,15}');"
         );
     }
 }
