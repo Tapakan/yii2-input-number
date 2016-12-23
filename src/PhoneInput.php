@@ -2,7 +2,6 @@
 
 namespace Tapakan\PhoneInput;
 
-use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
 use yii\helpers\ArrayHelper;
