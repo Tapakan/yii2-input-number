@@ -28,7 +28,16 @@ class PhoneInput extends InputWidget
     /**
      * @var array
      */
-    public $jsOptions = [];
+    public $jsOptions = [
+        'autoHideDialCode'   => false,
+        'autoPlaceholder'    => true,
+        'nationalMode'       => false,
+        'preferredCountries' => [
+            'ua'
+        ]
+    ];
+
+    const DEFAULT_VIEW = 'default';
 
     /**
      * @inheritdoc
@@ -39,10 +48,7 @@ class PhoneInput extends InputWidget
 
         PhoneInputAsset::register($this->view);
 
-        $id        = ArrayHelper::getValue($this->options, 'id');
-        $jsOptions = $this->jsOptions ? Json::encode($this->jsOptions) : '';
-
-        $this->view->registerJs("$('#{$id}').intlTelInput($jsOptions);");
+        $this->loadAssets();
     }
 
     /**
@@ -51,10 +57,28 @@ class PhoneInput extends InputWidget
     public function run()
     {
         $options = ArrayHelper::merge($this->defaultOptions, $this->options);
+        $view    = self::DEFAULT_VIEW;
+
         if ($this->hasModel()) {
-            return Html::activeInput($this->htmlTagType, $this->model, $this->attribute, $options);
+            $view .= '-model';
         }
 
-        return Html::input($this->htmlTagType, $this->name, $this->value, $options);
+        return $this->render($view, [
+            'options' => $options,
+        ]);
+    }
+
+    /**
+     * Include assets
+     */
+    private function loadAssets()
+    {
+        $id        = ArrayHelper::getValue($this->options, 'id');
+        $jsOptions = $this->jsOptions ? Json::encode($this->jsOptions) : '';
+
+        $this->view->registerJs(
+            "var input = $('#{$id}');" .
+            "input.intlTelInput($jsOptions);"
+        );
     }
 }
