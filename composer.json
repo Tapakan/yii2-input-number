@@ -1,0 +1,23 @@
+{
+    "name"       : "tapakan/yii2-input-number",
+    "description": "Hexa affiliate programs",
+    "keywords"   : [
+        "yii2",
+        "intl-tel-input",
+        "phone",
+        "yii2 phone"
+    ],
+    "author"     : {
+        "name" : "Alexander Oganov",
+        "email": "a.ohanov@hexa.com.ua",
+        "role" : "Developer"
+    },
+    "require"    : {
+        "bower-asset/intl-tel-input": "*"
+    },
+    "autoload"   : {
+        "psr-4": {
+            "Tapakan\\PhoneInput\\": "src/"
+        }
+    }
+}
