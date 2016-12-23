@@ -1,5 +1,7 @@
 <?php
 
+namespace Tapakan\PhoneInput;
+
 use yii\web\AssetBundle;
 
 /**
@@ -25,8 +27,6 @@ class PhoneInputAsset extends AssetBundle
         'build/js/intlTelInput.min.js',
     ];
 
-    /**
-     * @var array
-     */
+    /** @var array */
     public $depends = ['yii\web\JqueryAsset'];
 }
